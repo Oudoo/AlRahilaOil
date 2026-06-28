@@ -1,2 +1,0 @@
-## GOAL
-Fresh AgentOS initialization.
