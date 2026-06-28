@@ -70,7 +70,7 @@
             }).join('');
             lucide.createIcons();
             
-            document.getElementById('selection-count').innerText = selected.length > 0 ? \`تم تحديد \${selected.length} ترقيات\` : 'لم يتم تحديد أي ترقية';
+            document.getElementById('selection-count').innerText = selected.length > 0 ? "تم تحديد " + selected.length + " ترقيات" : "لم يتم تحديد أي ترقية";
         }
 
         function toggle(id) {
@@ -85,7 +85,7 @@
         function copySummary() {
             if (selected.length === 0) return;
             const names = selected.map(id => upgrades.find(u => u.id === id).title);
-            const text = \`مرحباً، أود تنفيذ الترقيات التالية:\n- \${names.join('\\n- ')}\`;
+            const text = "مرحباً، أود تنفيذ الترقيات التالية:\n- " + names.join("\n- ");
             navigator.clipboard.writeText(text);
             document.getElementById('copy-text').innerText = 'تم النسخ!';
             setTimeout(() => {
